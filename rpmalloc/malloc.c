@@ -430,7 +430,7 @@ MAC_INTERPOSE_SINGLE(pthread_create_proxy, pthread_create);
 #include <dlfcn.h>
 
 int
-pthread_create(pthread_t* thread,
+pthread_create_rpmalloc(pthread_t* thread,
                const pthread_attr_t* attr,
                void* (*start_routine)(void*),
                void* arg) {
